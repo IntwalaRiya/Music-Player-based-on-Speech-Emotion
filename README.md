@@ -6,4 +6,4 @@ Apart from this, I have used Librosa library for extracting features from upload
 Current my system works only on 3 Emotions: Happy, Sad, Surprise. And has simple UI.
 Dataset is used from site: https://www.kaggle.com/uwrfkaggler/ravdess-emotional-speech-audio
 I achieved 89% accuracy using MLP Classifier model.
-Upload your songs data in static folder in Music Player.
+Upload your songs data in static folder in Music Player. (My data were containing numerical name songs dataset of Happy, Sad and Party)
