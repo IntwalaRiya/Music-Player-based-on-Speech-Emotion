@@ -1,0 +1,79 @@
+table, th, td {
+                
+    border: 2px solid black;
+    font-family: sans-serif;
+    text-align: center;
+}
+th{
+    background-color: grey;
+}
+td{
+    background-color: lightgrey;
+}
+table{
+    height: 15%;
+    max-width: 10%;
+    margin: 0 auto;
+    border-collapse: collapse;
+}
+div.Heading{
+    align-items: center;
+    text-align: center;
+    color: white;
+    background-color: black;
+    height: 12%;
+    font-family: sans-serif;
+    max-width: 100%;
+    padding-top: 0.02%;
+}
+div.body{
+    align-items: center;
+    text-align: center;
+    align-content: center;
+    color: black;
+    background-color: white;
+    font-family: sans-serif;
+    max-width: 100%;
+    height: 80%;
+    padding-right: 1%;
+    min-height: 80%;
+    padding-left: 1%;
+    border: 2px solid black;
+    display: flex;
+    flex-direction: row;
+}
+div.fileupload{
+    align-content: center;
+    text-align: center;
+    color: black;
+    background-color: white;
+    font-family: sans-serif;
+    padding-top: 1%;
+    width: 100%;
+    min-height: 81.5%;
+    height: fit-content;
+    padding-bottom: 1%;
+    /* padding-top: 20%; */
+    border: 2px solid black;
+    position: relative;
+}
+div.songplay{
+    text-align: center;
+    color: black;
+    background-color: white;
+    font-family: sans-serif;
+    width: 100%;
+    min-height: 80%;
+    height: 84%;
+    padding-bottom: 1%;
+    border: 2px solid black;
+}
+.form{
+    /* margin: 0 auto; */
+    padding: 2%;
+    max-width: 80%;
+    position: absolute;
+    top: 50%;
+    left: 30%;
+    margin: -25px 0 0 -25px;
+}
