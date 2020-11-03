@@ -1,0 +1,115 @@
+<html>  
+    <head>  
+        <title>Home</title>  
+        <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='style.css') }}">
+    </head>  
+    <body> 
+        
+        <div class="Heading">
+            <h1>Welcome My Music Player...!!</h1>
+        </div>
+        
+        <div class="body">
+            <br>
+
+            <div class="fileupload">
+                <h2>Tell your Mood</h2>
+                <form action = "/success" class = "form" method = "post" enctype="multipart/form-data">  
+                    <input type="file" name="file" />  
+                    <input type = "submit" value="Upload">  
+                </form>
+            </div>  
+            <br>
+            
+            <div class="songplay">
+                <h2>General Song Playist</h2>
+                <table>
+                    <tr>
+                        <th>Song List</th>
+                        <th>Song</th>
+                    </tr>
+                    {%for i in range(0, len)%} 
+                        <tr>
+                            <td>{{songnamelist[i]}}</td>
+                            <td>
+                                <audio class="audioclass" controls>
+                                    <source src="/static/{{songnamelist[i]}}" type='audio/wav'>
+                                </audio>
+                            </td>
+                        </tr>
+                    {%endfor%} 
+                </table>
+            </div>
+            
+        </div>
+
+        <div class="body">
+            <br>
+            
+            <div class="songplay">
+                <h2>Happy Song Playist</h2>
+                <table>
+                    <tr>
+                        <th>Song List</th>
+                        <th>Song</th>
+                    </tr>
+                    {%for i in range(0, leng)%} 
+                        <tr>
+                            <td>{{happy[i]}}</td>
+                            <td>
+                                <audio class="audioclass" controls>
+                                    <source src="/static/{{happy[i]}}" type='audio/wav'>
+                                </audio>
+                            </td>
+                        </tr>
+                    {%endfor%} 
+                </table>
+            </div>
+             
+            <br>
+            <div class="songplay">
+                <h2>Sad Song Playist</h2>
+                <table>
+                    <tr>
+                        <th>Song List</th>
+                        <th>Song</th>
+                    </tr>
+                    {%for i in range(0, leng)%} 
+                        <tr>
+                            <td>{{sad[i]}}</td>
+                            <td>
+                                <audio class="audioclass" controls>
+                                    <source src="/static/{{sad[i]}}" type='audio/wav'>
+                                </audio>
+                            </td>
+                        </tr>
+                    {%endfor%} 
+                </table>
+            </div>
+
+            <div class="songplay">
+                <h2>Party Song Playist</h2>
+                <table>
+                    <tr>
+                        <th>Song List</th>
+                        <th>Song</th>
+                    </tr>
+                    {%for i in range(0, leng)%} 
+                        <tr>
+                            <td>{{party[i]}}</td>
+                            <td>
+                                <audio class="audioclass" controls>
+                                    <source src="/static/{{party[i]}}" type='audio/wav'>
+                                </audio>
+                            </td>
+                        </tr>
+                    {%endfor%} 
+                </table>
+            </div>
+
+        </div>
+        
+        <br>
+
+    </body>  
+</html>  

@@ -1,0 +1,98 @@
+<html>  
+    <head>  
+        <title>Your Songs!!</title>  
+        <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='style.css') }}">
+    </head>  
+    
+    <body>   
+        <div class="Heading">
+            <h1>Here's your song playlist...!!</h1>
+        </div>
+
+        <div class="body">
+            <div class="songplay">
+                <h2>Your Song Playist</h2>
+                <table>
+                    <tr>
+                        <th>Song List</th>
+                        <th>Song</th>
+                    </tr>
+                    {%for i in range(0, len)%} 
+                        <tr>
+                            <td>{{mysonglist[i]}}</td>
+                            <td>
+                                <audio class="audioclass" controls>
+                                    <source src="/static/{{mysonglist[i]}}" type='audio/wav'>
+                                </audio>
+                            </td>
+                        </tr>
+                    {%endfor%} 
+                </table>
+            </div>     
+        </div>
+
+        <div class="body">
+            
+            <div class="songplay">
+                <h2>Happy Song Playist</h2>
+                <table>
+                    <tr>
+                        <th>Song List</th>
+                        <th>Song</th>
+                    </tr>
+                    {%for i in range(0, leng)%} 
+                        <tr>
+                            <td>{{happy[i]}}</td>
+                            <td>
+                                <audio class="audioclass" controls>
+                                    <source src="/static/{{happy[i]}}" type='audio/wav'>
+                                </audio>
+                            </td>
+                        </tr>
+                    {%endfor%} 
+                </table>
+            </div>
+
+            <div class="songplay">
+                <h2>Sad Song Playist</h2>
+                <table>
+                    <tr>
+                        <th>Song List</th>
+                        <th>Song</th>
+                    </tr>
+                    {%for i in range(0, leng)%} 
+                        <tr>
+                            <td>{{sad[i]}}</td>
+                            <td>
+                                <audio class="audioclass" controls>
+                                    <source src="/static/{{sad[i]}}" type='audio/wav'>
+                                </audio>
+                            </td>
+                        </tr>
+                    {%endfor%} 
+                </table>
+            </div>
+
+            <div class="songplay">
+                <h2>Party Song Playist</h2>
+                <table>
+                    <tr>
+                        <th>Song List</th>
+                        <th>Song</th>
+                    </tr>
+                    {%for i in range(0, leng)%} 
+                        <tr>
+                            <td>{{party[i]}}</td>
+                            <td>
+                                <audio class="audioclass" controls>
+                                    <source src="/static/{{party[i]}}" type='audio/wav'>
+                                </audio>
+                            </td>
+                        </tr>
+                    {%endfor%} 
+                </table>
+            </div>
+        </div>
+        
+    </body>  
+</html>  
